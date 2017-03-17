@@ -29,3 +29,17 @@ The assembly is required for the exportquery to run and you will have to set the
 
 ### Setup ExportQuery
 download the assembly ExpQuery to an local folder where SQL server has access. Run the ExpQuery.sql file.
+The database trigger uses this stored procedure to export the code to the repository base.
+
+If you want to use it for other purposes:
+```
+declare @fileName nvarchar(500) = 'c:\temp\myFile.csv'
+,       @sql varchar(max)       = 'select * from #temp' -- any table
+,       @headers smallint       = 0/1 -- 0 is no headers
+,       @lineFeed smallint      = 0
+,       @noTrim                 = 1
+,       @separator varchar(1)   = ';'
+,       @decode  smallint       = 0
+
+exec <database>.dbo.ExportQuery @fileName, @sql, @headers, @lineFeed, @noTrim, @separator, @decode
+```
