@@ -21,3 +21,11 @@ These requirements are based on my setup.
 
 ## Global workflow
 Edit procedures, views, tables and saving them to SQL Server directly will trigger an event. The SQL Code is exported to an local git repository that is cloned from an remote. I use gitlab to manage the projects. Once you are finished developing commit the changes and push to the remote branch. Jenkins will build the release and apply the SQL code to the staging database. SQL Package will run against the latest build database and create and change script that can be applied to an build database. Some testing needs to be done and the change script can be applied to the production environment. This is how you would achieve continues integration for SQL Server.
+
+## ExportQuery
+I have been using this stored procedure for a while now. You can export an table directly from your script to an txt or csv file with our without headers and using an fieldterminator like ',' or ';'
+
+The assembly is required for the exportquery to run and you will have to set the trustworthy setting on your database on.
+
+### Setup ExportQuery
+download the assembly ExpQuery to an local folder where SQL server has access. Run the ExpQuery.sql file.
