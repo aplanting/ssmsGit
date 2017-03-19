@@ -45,3 +45,4 @@ declare @fileName nvarchar(500) = 'c:\temp\myFile.csv'
 
 exec <database>.dbo.ExportQuery @fileName, @sql, @headers, @lineFeed, @noTrim, @separator, @decode
 ```
+More to come...
