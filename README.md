@@ -45,4 +45,27 @@ declare @fileName nvarchar(500) = 'c:\temp\myFile.csv'
 
 exec <database>.dbo.ExportQuery @fileName, @sql, @headers, @lineFeed, @noTrim, @separator, @decode
 ```
+
+## Git 
+I have created on an remote server an git repository for every userdatabase in SQL Server. For all my internal projects I use gitlab as management tool. You can use your favorite tool in order to create an local working copy. The location where you create this local folder is needed later on.
+
+## Baseline Powershell script
+To start with the version control of the userdatabase you will need an baseline. The script I use is based on my preferences of course so you can adjust as you seem fit.
+
+The script will create an folder structure for each userdatabase and for the master database. Because I use Linked Servers the master database is also needed. This is the lay-out.
+- Database
+  - Assemblies
+  - Roles
+  - Schemas
+  - ServiceBroker
+  - StoredProcedures
+  - Tables
+  - Triggers
+  - UserDefinedFunctions
+  - Users
+  - Views
+
+The script is called schema.ps1     
+
+
 More to come...
