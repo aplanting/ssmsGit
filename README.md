@@ -68,4 +68,5 @@ The script will create an folder structure for each userdatabase and for the mas
 The script is called schema.ps1     
 
 
-More to come...
+## SQL Server Trigger
+This trigger listens to event data on the SQL Server and can output sql files of the action that has been done, like create procedure or alter table. It will script out that changes so you can version the database. The folder is relative to your SQL Server.
