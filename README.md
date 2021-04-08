@@ -1,5 +1,5 @@
 # ssmsGit
-SQL Server Management Studio Source Control with Git, the DevOps approach.
+Get your SQL Server database under version control with git
 
 ## Synopsis
 This project is an collection of software and t-sql code in order to get your SQL Server under version control without the need to install expensive tools like RedGate's solution for source control. All the code and assemblies are free to use.
